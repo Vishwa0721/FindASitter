@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Explore - Find the babysitter that's perfect for your child{% endblock %}
+
+{% block content %}
+<style>
+	table, th, td {
+		border:1px solid black;
+	}
+	th, td {
+		padding:12px;
+	}
+	th {
+		background-color:black;
+		color:white;
+	}
+	tr:nth-child(even) {
+		background-color:#ccc;
+	}
+</style>
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Age</th>
+		<th>Minimum Salary Request</th>
+		<th>Email</th>
+		<th>Phone</th>
+	</tr>
+	{% for row in rows %}
+	<tr>
+	<td>{{row["name"]}}</td>
+	<td>{{row["age"]}}</td>
+	<td>${{row["minSal"]}}</td>
+	<td>{{row["email"]}}</td>
+	<td>{{row["phoneNumber"]}}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}

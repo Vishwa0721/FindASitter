@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}FindASitter - An online platform to find babysitters{% endblock %}
+
+{% block content %}
+<style>
+	h1 {
+		text-align:center;
+	}
+	p {
+		text-align:center;
+	}
+	#search, #become {
+		padding:12px;
+		background-color:yellow;
+		border:2px solid black;
+	}
+</style>
+<form method="POST">
+<h1>Welcome to FindASitter!</h1>
+<br>
+<br>
+<h1>Start searching for sitters</h1>
+<p><a id="search" type=submit name="search" href="/explore">Search</a><p>
+<br>
+<br>
+<h1>Beocme a sitter</h1>
+<p><a id="become" type=submit name="become" href="/signup">Become a sitter</a><p>
+</form>
+{% endblock %}

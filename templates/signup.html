@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Become a babysitter - Get found by others who need a babysitter{% endblock %}
+
+{% block content %}
+<form method="POST">
+	<label for="name">Name</label>
+	<input id="name" type=text name="name">
+	<br>
+	<br>
+	<label for="name">Age</label>
+	<input id="age" type=number name="age">
+	<br>
+	<br>
+	<label for="name">Minimum Salary</label>
+	<input id="minSal" type=text name="minSal">
+	<br>
+	<br>
+	<label for="name">Email</label>
+	<input id="email" type=email name="email">
+	<br>
+	<br>
+	<label for="name">Phone Number</label>
+	<input id="phone" type=tel name="phone">
+	<br>
+	<br>
+	<input id="submit" type=submit name="submit">
+	<label id="error" style="display:none;">Please finish all required fields</label>
+</form>
+{% endblock %}
